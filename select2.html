@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>DOM Building A Select Element</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <script>
+    window.onload = function () {
+      // make the main element
+      const mainEl = document.createElement("main");
+
+      // make the form
+      const formEl = document.createElement("form");
+      formEl.setAttribute("id", "form");
+
+      // make the label for the select
+      const labelEl = document.createElement("label");
+      labelEl.appendChild(document.createTextNode("Select A State"));
+      labelEl.setAttribute("id", "label");
+
+      // make the select and the options
+      const selectEl = document.createElement("select");
+      const option1 = document.createElement("option");
+      option1.appendChild(document.createTextNode("Alabama"));
+      const option2 = document.createElement("option");
+      option2.appendChild(document.createTextNode("California"));
+      option2.selected = true;
+      const option3 = document.createElement("option");
+      option3.appendChild(document.createTextNode("Oregon"));
+
+      selectEl.appendChild(option1);
+      selectEl.appendChild(option2);
+      selectEl.appendChild(option3);
+
+      // add the main to the body element
+      document.body.appendChild(mainEl);
+
+      // add the form to the main
+      mainEl.appendChild(formEl);
+
+      // add the label to the form
+      const formElement = document.getElementById("form");
+      formElement.appendChild(labelEl);
+
+      // add the select to the label
+      const labelElement = document.getElementById("label");
+      labelElement.appendChild(selectEl);
+
+      // create a footer & add it to the body element
+      const footerEl = document.createElement("footer");
+      document.body.appendChild(footerEl);
+
+      // put a link in the footer
+      const linkEl = document.createElement("a");
+      linkEl.setAttribute("href", "select1.html");
+      linkEl.appendChild(
+        document.createTextNode("HTML-only version of this CodePen")
+      );
+
+      footerEl.appendChild(linkEl);
+    };
+  </script>
+</body>
+</html>
