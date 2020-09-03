@@ -12,10 +12,6 @@
       // make the main element
       const mainEl = document.createElement("main");
 
-      // make the form
-      const formEl = document.createElement("form");
-      formEl.setAttribute("id", "form");
-
       // make the label for the select
       const labelEl = document.createElement("label");
       labelEl.appendChild(document.createTextNode("Select A State"));
@@ -38,12 +34,8 @@
       // add the main to the body element
       document.body.appendChild(mainEl);
 
-      // add the form to the main
-      mainEl.appendChild(formEl);
-
-      // add the label to the form
-      const formElement = document.getElementById("form");
-      formElement.appendChild(labelEl);
+      // add the label 
+      mainEl.appendChild(labelEl);
 
       // add the select to the label
       const labelElement = document.getElementById("label");
