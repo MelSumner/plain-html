@@ -34,11 +34,13 @@
       // make the label element for the select element
       const labelEl = document.createElement("label");
       labelEl.appendChild(document.createTextNode("Select A State"));
+      labelEl.setAttribute("id", "select-label");
       labelEl.setAttribute("for", "select");
 
       // make the select element and the option elements
       const selectEl = document.createElement("select");
       selectEl.setAttribute("id", "select");
+      
       const option1 = document.createElement("option");
       option1.appendChild(document.createTextNode("Alabama"));
       const option2 = document.createElement("option");
@@ -62,7 +64,7 @@
       formElement.appendChild(labelEl);
 
       // add the select element to the label element
-      const labelElement = document.getElementById("label");
+      const labelElement = document.getElementById("select-label");
       labelElement.appendChild(selectEl);
     };
   </script>
