@@ -9,6 +9,8 @@
 <body>
   <header>
     <h1>testing assumptions</h1>
+  </header>
+  <aside>
     <nav>
       <ul>
         <li><a href="index.html">Index page</a></li>
@@ -17,22 +19,24 @@
         <li><a href="select3.html">JS-built Select, no form element</a></li>
       </ul>
     </nav>
-  </header>
+  </aside>
+  <main>
+  </main>
+  <footer>
+    <p>This is just <a href="https://github.com/MelSumner/plain-html">a GitHub repo</a> deployed to Netlify.</p>
+  </footer>
   <script>
     window.onload = function () {
-      // make the main element
-      const mainEl = document.createElement("main");
-
-      // make the form
+      // make the form element
       const formEl = document.createElement("form");
       formEl.setAttribute("id", "form");
 
-      // make the label for the select
+      // make the label element for the select element
       const labelEl = document.createElement("label");
       labelEl.appendChild(document.createTextNode("Select A State"));
       labelEl.setAttribute("id", "label");
 
-      // make the select and the options
+      // make the select element and the option elements
       const selectEl = document.createElement("select");
       const option1 = document.createElement("option");
       option1.appendChild(document.createTextNode("Alabama"));
@@ -46,17 +50,17 @@
       selectEl.appendChild(option2);
       selectEl.appendChild(option3);
 
-      // add the main to the body element
-      document.body.appendChild(mainEl);
+      // find the main element
+      const mainEl = document.getElementsByTagName('main');
 
-      // add the form to the main
+      // add the form element to the main element
       mainEl.appendChild(formEl);
 
-      // add the label to the form
+      // add the label element to the form element
       const formElement = document.getElementById("form");
       formElement.appendChild(labelEl);
 
-      // add the select to the label
+      // add the select element to the label element
       const labelElement = document.getElementById("label");
       labelElement.appendChild(selectEl);
     };
