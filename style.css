@@ -43,7 +43,7 @@ header > h1 {
 }
 @media screen and (min-width: 748px){
   aside {
-    border-right: 1px solid black;
+    border-right: 1px solid rgb(207, 207, 207);
   }
 }
 main {
@@ -66,6 +66,6 @@ form select {
 }
 
 footer {
-  border-top: 1px solid black;
+  border-top: 1px solid rgb(207, 207, 207);
   text-align: center;
 }
